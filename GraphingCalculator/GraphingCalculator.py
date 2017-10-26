@@ -1,11 +1,13 @@
 """Graphs a User's Expression.
 
+Written by Josh Harkema (30016089) -- For Dr. Ben Stephenson
+
 Function to graph expression collected from user. Takes user input and uses
 for loop to iterate through values of x defined in RANGE_LOW and RANGE_HIGH.
 Scales to SCALE. Starts by drawing gridlines using the constants below, then
 evaluates user input using my_range to increase the resolution of the results.
 Technically, the scope of the graph can be changed by reducing the scale and
-increasing the labelling on the ticks. 
+increasing tick += value to match the new scale the labelling on the ticks.
 """
 
 from math import *
@@ -91,7 +93,6 @@ def evaluate_expression():
     using 100's of tiny SimpleGraphic's line segments.
     """
     line_coordinate_array = [] # set empty array
-    tupled_coordinate_array = []
     loop_count = -1 # set loop number to -1 so first run = 0
     # initialize user input, blank line fails to trigger loop
     print("Enter the expression (blank line to quit): ")
