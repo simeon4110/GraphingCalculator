@@ -54,7 +54,7 @@ def maxima_minima(array):
 
     for item in maxima_array: # draw the maxima
         x, y = item
-        # skip ellipse when coordinates = (0, 0) (offset coorects for rounding)
+        # skip ellipse when coordinates = (0, 0) (offset corrects for rounding)
         if round(x) != (X_ZER0 + X_OFFSET) or round(y) != (Y_ZERO + Y_OFFSET):
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
@@ -63,7 +63,7 @@ def maxima_minima(array):
 
     for item in minima_array: # draw the minima
         x, y = item
-        # skip ellipse when coordinates = (0, 0) (offset coorects for rounding)
+        # skip ellipse when coordinates = (0, 0) (offset corrects for rounding)
         if round(x) != (X_ZER0 + X_OFFSET) or round(y) != (Y_ZERO + Y_OFFSET):
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
