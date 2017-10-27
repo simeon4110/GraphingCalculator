@@ -18,6 +18,8 @@ from  SimpleGraphics import ellipse, setColor
 
 X_ZER0 = 400    # x + X_ZERO = (0, y)
 X_OFFSET = 1    # used to account for rounding errors
+Y_ZERO = 300
+Y_OFFSET = 1
 ELLIPSE_W_H = 6 # width and height of the ellipse markers
 
 def maxima_minima(array):
@@ -52,8 +54,8 @@ def maxima_minima(array):
 
     for item in maxima_array: # draw the maxima
         x, y = item
-        # skip ellipse when x == 401 (i.e. (0, 0))
-        if round(x) != (X_ZER0 + X_OFFSET): # 401 to account for roudning errors
+        # skip ellipse when coordinates = (0, 0) (offset coorects for rounding)
+        if round(x) != (X_ZER0 + X_OFFSET) or round(y) != (Y_ZERO + Y_OFFSET):
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
             setColor("purple")
@@ -61,8 +63,8 @@ def maxima_minima(array):
 
     for item in minima_array: # draw the minima
         x, y = item
-        # skip ellipse when x == 401 (i.e. (0, 0))
-        if round(x) != (X_ZER0 + X_OFFSET): # 401 to account for rounding errors
+        # skip ellipse when coordinates = (0, 0) (offset coorects for rounding)
+        if round(x) != (X_ZER0 + X_OFFSET) or round(y) != (Y_ZERO + Y_OFFSET):
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
             setColor("orange")
