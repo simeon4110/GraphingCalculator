@@ -56,7 +56,7 @@ def maxima_minima(array):
         if round(x) != (X_ZER0 + X_OFFSET): # 401 to account for roudning errors
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
-            setColor("orange")
+            setColor("purple")
             ellipse(x, y, ELLIPSE_W_H, ELLIPSE_W_H)
 
     for item in minima_array: # draw the minima
@@ -65,5 +65,5 @@ def maxima_minima(array):
         if round(x) != (X_ZER0 + X_OFFSET): # 401 to account for rounding errors
             x -= (ELLIPSE_W_H / 2) ##
             y -= (ELLIPSE_W_H / 2) # account for width/height of ellipse
-            setColor("purple")
+            setColor("orange")
             ellipse(x, y, ELLIPSE_W_H, ELLIPSE_W_H)
